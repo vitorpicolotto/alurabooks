@@ -19,7 +19,7 @@
         <header class="cabecalho">
             <div class="container">
                 <input type="checkbox" id="menu" class="container__botao">
-                <label for="menu">
+                <label for="menu" class="container__rotulo">
                     <span class="cabecalho__menu-hamburguer container__imagem"></span>
                 </label>
                 <ul class="lista-menu">
@@ -36,7 +36,7 @@
 
             <ul class="opções">
                 <input type="checkbox" id="opções-menu" class="opções__botão">
-                <label for="opções-menu">
+                <label for="opções-menu" class="opções__rotulo">
                     <li class="opções__item">Categorias</li>
                 </label>
 
@@ -53,9 +53,17 @@
             </ul>
 
             <div class="container">
-                <a href="#"> <img src="img/Favoritos.svg" alt="meus favoritos" class="container__imagem container__imagem-transparente"> </a>
-                <a href="#"> <img src="img/Compras.svg" alt="carrinho de compras" class="container__imagem"> </a>
-                <a href="#"> <img src="img/Usuário.svg" alt="meu perfil" class="container__imagem"> </a>
+                <a href="#"> 
+                    <img src="img/Favoritos.svg" alt="meus favoritos" class="container__imagem container__imagem-transparente"> 
+                </a>
+                <a href="#" class="container__link"> 
+                    <img src="img/Compras.svg" alt="carrinho de compras" class="container__imagem"> 
+                    <p class="container__texto">Minha sacola</p>
+                </a>
+                <a href="#" class="container__link"> 
+                    <img src="img/Usuário.svg" alt="meu perfil" class="container__imagem"> 
+                    <p class="container__texto">Meu perfil</p>
+                </a>
             </div>
         </header>
 
@@ -67,92 +75,93 @@
 
         <section class="carrossel">
             <h2 class="carrossel__titulo">Novos lançamentos</h2>
-               
-                <div class="swiper">
-                    <div class="swiper-pagination"></div>               
-                    <div class="swiper-wrapper">               
-                        <div class="swiper-slide"><img src="img/ApacheKafka.svg" alt="livro apache kafka alura"></div>
-                        <div class="swiper-slide"><img src="img/Guia Front-end.svg" alt="livro guia frontend alura"></div>
-                        <div class="swiper-slide"><img src="img/Javascript.svg" alt="livro js alura"></div>
-                        <div class="swiper-slide"><img src="img/Liderança.svg" alt="livro lideranca alura"></div>
-                        <div class="swiper-slide"><img src="img/Nodejs.svg" alt="livro nodejs alura"></div>
-                        <div class="swiper-slide"><img src="img/MEAN.svg" alt="livro mean alura"></div>
-                    </div>
-                        
-                    <div class="swiper-button-prev"></div>
-                    <div class="swiper-button-next"></div>
-                </div>
-
-                <div class="card">
-                    <!--1ª linha-->
-                    <div class="card__descrição"> <!--coloca várias divs pra ajudar na criação do flexbox, não tem valor semântico-->
-                    <!--1ª coluna-->
-                        <div class="descrição">
-                            <h3 class="descrição__titulo">Talvez você também se interesse por...</h3>
-                            <h2 class="descrição__titulo-livro">Angular 11 e Firebase</h2>
-                            <p class="descrição__texto">Construindo uma aplicação integrada com a plataforma do Google.</p>
+                <div class="carrossel__container">
+                    <div class="swiper">
+                        <div class="swiper-pagination"></div>               
+                        <div class="swiper-wrapper">               
+                            <div class="swiper-slide"><img src="img/ApacheKafka.svg" alt="livro apache kafka alura"></div>
+                            <div class="swiper-slide"><img src="img/Guia Front-end.svg" alt="livro guia frontend alura"></div>
+                            <div class="swiper-slide"><img src="img/Javascript.svg" alt="livro js alura"></div>
+                            <div class="swiper-slide"><img src="img/Liderança.svg" alt="livro lideranca alura"></div>
+                            <div class="swiper-slide"><img src="img/Nodejs.svg" alt="livro nodejs alura"></div>
+                            <div class="swiper-slide"><img src="img/MEAN.svg" alt="livro mean alura"></div>
                         </div>
-                    <!--2ª coluna-->
-                        <img src="img/Angular.svg" alt="logo angular" class="descrição__imagem">
+                            
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div>
                     </div>
 
-                    <!--2ª linha-->
-                    <div class="card__botoes">
+                    <div class="card">
+                        <!--1ª linha-->
+                        <div class="card__descrição"> <!--coloca várias divs pra ajudar na criação do flexbox, não tem valor semântico-->
                         <!--1ª coluna-->
-                        <ul class="botoes">
-                            <li class="botoes__item"><img src="img/Favoritos.svg" alt="favorotar item"></li>
-                            <li class="botoes__item"><img src="img/Compras.svg" alt="comprar item"></li>
-                        </ul>
+                            <div class="descrição">
+                                <h3 class="descrição__titulo">Talvez você também se interesse por...</h3>
+                                <h2 class="descrição__titulo-livro">Angular 11 e Firebase</h2>
+                                <p class="descrição__texto">Construindo uma aplicação integrada com a plataforma do Google.</p>
+                            </div>
+                        <!--2ª coluna-->
+                            <img src="img/Angular.svg" alt="logo angular" class="descrição__imagem">
+                        </div>
 
-                        <a href="#" class="botoes__ancora">Saiba mais</a>
+                        <!--2ª linha-->
+                        <div class="card__botoes">
+                            <!--1ª coluna-->
+                            <ul class="botoes">
+                                <li class="botoes__item"><img src="img/Favoritos.svg" alt="favoritar item"></li>
+                                <li class="botoes__item"><img src="img/Compras.svg" alt="comprar item"></li>
+                            </ul>
+
+                            <a href="#" class="botoes__ancora">Saiba mais</a>
+                        </div>
                     </div>
                 </div>
         </section>
 
         <section class="carrossel">
             <h2 class="carrossel__titulo">Mais vendidos</h2>
-
-            <div class="swiper">
-                <div class="swiper-pagination"></div>               
-                <div class="swiper-wrapper">               
-                    <div class="swiper-slide"><img src="img/MEAN.svg" alt="livro mean alura"></div>
-                    <div class="swiper-slide"><img src="img/Nodejs.svg" alt="livro nodejs alura"></div>
-                    <div class="swiper-slide"><img src="img/Liderança.svg" alt="livro lideranca alura"></div>
-                    <div class="swiper-slide"><img src="img/Javascript.svg" alt="livro js alura"></div>
-                    <div class="swiper-slide"><img src="img/ApacheKafka.svg" alt="livro apache kafka alura"></div>
-                    <div class="swiper-slide"><img src="img/Guia Front-end.svg" alt="livro guia frontend alura"></div>
-                </div>
-                    
-                <div class="swiper-button-prev"></div>
-                <div class="swiper-button-next"></div>
-            </div>
-           
-            <div class="card">
-                <!--1ª linha-->
-                <div class="card__descrição"> 
-                    <!--1ª coluna-->
-                        <div class="descrição">
-                            <img src="img/Estrelinhas.svg" alt="autora 5 estrelas" class="descrição__estrelinhas">
-                            <h3 class="descrição__titulo">Autora do mês</h3>
-                            <h2 class="descrição__titulo-livro">Juliana Agarikov</h2>
-                            <p class="descrição__texto">Analista de sistemas e escritora, Juliana é especialista em Front-End.</p>
+                <div class="carrossel__container">
+                    <div class="swiper">
+                        <div class="swiper-pagination"></div>               
+                        <div class="swiper-wrapper">               
+                            <div class="swiper-slide"><img src="img/MEAN.svg" alt="livro mean alura"></div>
+                            <div class="swiper-slide"><img src="img/Nodejs.svg" alt="livro nodejs alura"></div>
+                            <div class="swiper-slide"><img src="img/Liderança.svg" alt="livro lideranca alura"></div>
+                            <div class="swiper-slide"><img src="img/Javascript.svg" alt="livro js alura"></div>
+                            <div class="swiper-slide"><img src="img/ApacheKafka.svg" alt="livro apache kafka alura"></div>
+                            <div class="swiper-slide"><img src="img/Guia Front-end.svg" alt="livro guia frontend alura"></div>
                         </div>
-                    <!--2ª coluna-->
-                        <img src="img/Perfil-escritora 1.svg" alt="logo angular" class="descrição__imagem">
+                            
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div>
                     </div>
+                
+                    <div class="card">
+                        <!--1ª linha-->
+                        <div class="card__descrição"> 
+                            <!--1ª coluna-->
+                                <div class="descrição">
+                                    <img src="img/Estrelinhas.svg" alt="autora 5 estrelas" class="descrição__estrelinhas">
+                                    <h3 class="descrição__titulo">Autora do mês</h3>
+                                    <h2 class="descrição__titulo-livro">Juliana Agarikov</h2>
+                                    <p class="descrição__texto">Analista de sistemas e escritora, Juliana é especialista em Front-End.</p>
+                                </div>
+                            <!--2ª coluna-->
+                                <img src="img/Perfil-escritora 1.svg" alt="logo angular" class="descrição__imagem">
+                            </div>
 
-                <!--2ª linha-->
-                <div class="card__botoes">
-                    <!--1ª coluna-->
-                    <ul class="botoes">
-                        <li class="botoes__item"><img src="img/Favoritos.svg" alt="favorotar item"></li>
-                        <li class="botoes__item"><img src="img/Compras.svg" alt="comprar item"></li>
-                    </ul>
+                        <!--2ª linha-->
+                        <div class="card__botoes">
+                            <!--1ª coluna-->
+                            <ul class="botoes">
+                                <li class="botoes__item"><img src="img/Favoritos.svg" alt="favorotar item"></li>
+                                <li class="botoes__item"><img src="img/Compras.svg" alt="comprar item"></li>
+                            </ul>
 
-                    <a href="#" class="botoes__ancora">Saiba mais</a>
+                            <a href="#" class="botoes__ancora">Saiba mais</a>
+                        </div>
+                    </div>   
                 </div>
-
-            </div>
         </section>
 
         <section class="topicos">
